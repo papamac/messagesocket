@@ -1,0 +1,55 @@
+###############################################################################
+#
+#  PACKAGE:  Fixed-length message socket test and evaluation (messagesocket)
+#     FILE:  remove
+#    TITLE:  Remove the messagesocket package
+# FUNCTION:  Restore system files to their state before any installations by
+#            the install script.
+#    USAGE:  Use with papamac's personal package utility (p2pkg).  See below.
+#            below).
+#   AUTHOR:  papamac
+#  VERSION:  1.0.0
+#     DATE:  January 19, 2020
+#
+#
+# MIT LICENSE:
+#
+# Copyright (c) 2020 David A. Krause, aka papamac
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# allcopies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+#
+#
+# DESCRIPTION:
+#
+# The remove script removes all messagesocket files from the current working
+# directory  It does not remove papamaclib files.
+#
+# remove is designed to be used with p2pkg.  Usage is as follows:
+#
+# p2pkg -r messagesocket                # Remove the messagesocket package
+#                                         files and directories from the
+#                                         current working directory.
+#
+###############################################################################
+
+# Remove the messagesocket files.
+
+infomsg "$g${t}remove:$n removing $pkg_name files and directories from $b$t$PWD$n"
+rm -f $bin/msg-c $bin/msg-s
+rm -fr $pkg
