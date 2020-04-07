@@ -12,8 +12,8 @@ FUNCTION:  msg-c provides a client program to test and evaluate the performance
            the argsandlogs module augmented by the code below.  It is
            compatible with Python 2.7.16 and all versions of Python 3.x.
   AUTHOR:  papamac
- VERSION:  1.0.1
-    DATE:  January 5, 2020
+ VERSION:  1.0.2
+    DATE:  April 7, 2020
 
 
 MIT LICENSE:
@@ -49,8 +49,8 @@ DEPENDENCIES/LIMITATIONS:
 
 """
 __author__ = 'papamac'
-__version__ = '1.0.1'
-__date__ = 'January 5, 2020'
+__version__ = '1.0.2'
+__date__ = 'April 7, 2020'
 
 
 from socket import gethostname
@@ -74,9 +74,11 @@ def send_to_server():
 
 
 AL.parser.add_argument('server', nargs='?', default=gethostname(),
-                       help='FQDN or IPv4 address of the message server')
-AL.parser.add_argument('-P', '--port_number', help='%s port number' % AL.name)
-AL.start()
+                       help='server FQDN or IPv4 address')
+AL.parser.add_argument('-P', '--port_number', type=int,
+                       choices=range(50000, 60000, 1000), default=50000,
+                       help='server port number')
+AL.start(__version__)
 
 set_status_interval(60.0)
 server = MessageSocket(AL.name)
