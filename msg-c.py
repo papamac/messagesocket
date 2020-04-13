@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
  PACKAGE:  Fixed-length message socket test and evaluation (messagesocket)
   MODULE:  msg-c.py
@@ -12,8 +12,8 @@ FUNCTION:  msg-c provides a client program to test and evaluate the performance
            the argsandlogs module augmented by the code below.  It is
            compatible with Python 2.7.16 and all versions of Python 3.x.
   AUTHOR:  papamac
- VERSION:  1.0.2
-    DATE:  April 7, 2020
+ VERSION:  1.0.3
+    DATE:  April 13, 2020
 
 
 MIT LICENSE:
