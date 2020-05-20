@@ -12,8 +12,8 @@ FUNCTION:  msg-c provides a client program to test and evaluate the performance
            the argsandlogs module augmented by the code below.  It is
            compatible with Python 2.7.16 and all versions of Python 3.x.
   AUTHOR:  papamac
- VERSION:  1.0.3
-    DATE:  April 13, 2020
+ VERSION:  1.0.4
+    DATE:  May 20, 2020
 
 
 MIT LICENSE:
@@ -48,10 +48,10 @@ DEPENDENCIES/LIMITATIONS:
 ****************************** needs work *************************************
 
 """
-__author__ = 'papamac'
-__version__ = '1.0.2'
-__date__ = 'April 7, 2020'
 
+__author__ = 'papamac'
+__version__ = '1.0.4'
+__date__ = 'May 20, 2020'
 
 from socket import gethostname
 from threading import Thread
